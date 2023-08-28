@@ -17,7 +17,7 @@ const ThumbnailImage = styled.img`
   }
 `;
 
-function Thumbnail(props) {
+function Thumbnail(props: any) {
   return (
       <ThumbnailWrapper>
         <ThumbnailImage

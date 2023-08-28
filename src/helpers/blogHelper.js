@@ -7,21 +7,28 @@ import TownshipClock from '../images/TownshipClock.png';
 
 export const Blogs = [
   {
-    year: 2022,
+    year: 2023,
     blogs: [
       {
-        title: "TOWNSHIP PROJECT",
-        description: "My first attempt at creating a Unity game from scratch. It's a first-person puzzle game inspired by Myst and The Witness. My hope is to get it on the Steam store by the end of 2022.",
+        title: "TOWN-SHIP PROJECT",
+        description: [
+          "My first attempt at creating a Unity game from scratch.",
+          "It's a first-person puzzle game inspired by games like Myst and The Witness.",
+          "My hope is to release it for free on itch.io."
+        ],
         images: [TownshipStreet, TownshipClock, TownshipGarden ]
       }
     ]
   },
   {
-    year: 2021,
+    year: 2022,
     blogs: [
       {
         title: "HOLLY WALSH PORTFOLIO SITE",
-        description: "I site I created for the artist Holly Walsh. Holly is an Irish landscape artist based in Edinburgh, Scotland.",
+        description: [
+          "I site I created for the artist Holly Walsh.",
+          "Holly is an Irish landscape artist based in Edinburgh, Scotland."
+        ],
         images: [HollyArtMain, HollyArtMainDetail, HollyArtMobile]
       }
     ]

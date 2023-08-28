@@ -4,29 +4,25 @@ import { Blogs } from '../../helpers/blogHelper';
 import Thumbnail from './components/Thumbnail/Thumbnail';
 
 const BlogItem = styled.div`
-  background-color: white;
-  padding-bottom: 30px;
+  background-color: ${props => props.theme.colors.primary};
+  padding: 10px 20px;
   margin-bottom: 20px;
 `;
 const BlogItemYear = styled.div`
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: ${props => props.theme.fontFamily};
   font-size: 32px;
   font-weight: 500;
   text-align: right;
-  margin-right: 30px;
-  color: white;
+  color: ${props => props.theme.colors.primary};
 `;
 const BlogItemTitle = styled.div`
-  color: #bf2222;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 48px;
+  color: ${props => props.theme.colors.header};
+  font-family: ${props => props.theme.fontFamily};
+  font-size: ${props => props.theme.fontSizes.title};
   font-weight: 500;
-  text-align: center;
 `;
 const BlogItemDescription = styled.div`
   margin-top: 10px;
-  margin-left: 5px;
-  text-align: center;
 `;
 const BlogItemContent = styled.div`
   margin-top: 20px;
@@ -35,17 +31,22 @@ const BlogItemContent = styled.div`
 function Blog () {
   return (
     <Fragment>
-      {Blogs.map((yearItem)=>(
-        <Fragment>
+      {Blogs.map((yearItem, index)=>(
+        <Fragment key={index}>
           <BlogItemYear>{yearItem.year}</BlogItemYear>
-          {yearItem.blogs.map((blog)=>(
-            <BlogItem>
+          {yearItem.blogs.map((blog, index)=>(
+            <BlogItem key={index}>
               <BlogItemTitle>{blog.title}</BlogItemTitle>
-              <BlogItemDescription>{blog.description}</BlogItemDescription>
+              {blog.description.map((item, index)=>(
+                <BlogItemDescription key={index}>
+                  {item}
+                </BlogItemDescription>
+              ))}
               <BlogItemContent>
-                {blog.images.map((image)=>(
+                {blog.images.map((image, index)=>(
                   <Thumbnail
                     image={image}
+                    key={index}
                   />
                 ))}
               </BlogItemContent>
