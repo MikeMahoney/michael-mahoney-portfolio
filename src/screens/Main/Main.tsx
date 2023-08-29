@@ -12,22 +12,22 @@ const MainWrapper = styled.div`
   height: 100vh;
 `;
 const MainSideBar = styled.aside`
-  flex: 1;
   display: flex;
+  width: 270px;
   flex-direction: column;
   justify-content: space-between;
   background-color: ${props => props.theme.colors.primary};
   box-shadow: 0px 4px 70px -25px rgb(116, 105, 98);
   color: ${props => props.theme.colors.header};
   font-family: ${props => props.theme.fontFamily};
+  padding: 0 20px;
 `;
 const MainSideBarTitle = styled.div`
   font-size: ${props => props.theme.fontSizes.title};
-  font-weight: bold; 
-  margin-left: 10px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin: 20px 10px;
   color: ${props => props.theme.colors.header};
 `;
 const MainSideBarNav = styled.div`
@@ -50,18 +50,20 @@ const MainSideBarNav = styled.div`
 const MainContent = styled.main`
   display: flex;
   flex-direction: column;
-  flex: 3;
-  height: 100vh;
   padding: 20px;
   overflow-y: auto;
   color: ${props => props.theme.colors.text};
+  width: 60%;
+  min-width: 617px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const ThemeSwitcher = styled.div`
   display: flex;
   height: 40px;
   margin-left: 20px;
-  width: 45%;
+  width: 135px;
   justify-content: space-between;
   align-items: center;
 `;

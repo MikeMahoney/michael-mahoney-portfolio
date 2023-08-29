@@ -4,15 +4,15 @@ import { ThemeProvider } from "styled-components";
 const defaultTheme = {
     colors: {
         primary: 'white',
-        secondary: '#BF2222',
-        header: '#BF2222',
+        secondary: '#0060AD',
+        header: '#364654',
         text: 'black',
         hover: 'black'
     },
-    fontFamily: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
+    fontFamily: `Garamond, Tahoma, Geneva, Verdana, sans-serif`,
     fontSizes: {
         header: '20px',
-        title: '24px',
+        title: '22px',
         default: '14px'
     }
 };
@@ -33,7 +33,7 @@ const darkTheme = {
     }
 };
 
-const Theme = ({ children, themeType }: any) => {
+function Theme({ children, themeType }: any) {
     const getTheme = () => {
         switch(themeType) {
             case 'DEFAULT':
