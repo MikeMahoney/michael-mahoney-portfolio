@@ -7,15 +7,17 @@ import './App.css';
 import Main from './screens/Main/Main';
 import { BrowserRouter } from 'react-router-dom';
 
-function App() {
-    const [themeType, setThemeType] = useState('DEFAULT');
-    return (
-      <BrowserRouter>
-        <Theme themeType={themeType}>
-          <Main setThemeType={setThemeType} />
-        </Theme>
-      </BrowserRouter>
-    );
+interface IApp { }
+
+const App: React.FC<IApp> = () => {
+  const [themeType, setThemeType] = useState('DEFAULT');
+  return (
+    <BrowserRouter>
+      <Theme themeType={themeType}>
+        <Main setThemeType={setThemeType} />
+      </Theme>
+    </BrowserRouter>
+  );
 }
 
 export default App;

@@ -1,38 +1,24 @@
-import { useState } from 'react';
-import styled from 'styled-components';
+import { ReactNode, useState } from 'react';
+import {
+  CollapsibleCaretClosed,
+  CollapsibleCaretOpen,
+  CollapsibleContent,
+  CollapsibleHeader,
+  CollapsibleWrapper
+} from './CollapsibleStyles';
 
-const CollapsibleWrapper = styled.div`
-  color: ${props => props.theme.colors.header};
-  font-family: ${props => props.theme.fontFamily};
-  font-weight: 600;
-  margin-top: 3px;
-`;
-const CollapsibleHeader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid ${props => props.theme.colors.header};
-  border-bottom: 1px solid ${props => props.theme.colors.header};
-  height: 30px;
-  padding-right: 10px;
-  &:hover {
-    cursor: pointer;
-  }
-`;
-const CollapsibleCaretOpen = styled.div`
-  font-size: 15px;
-`;
-const CollapsibleCaretClosed = styled.div`
-  font-size: 15px;
-`;
-const CollapsibleContent = styled.div``;
+interface ICollapsible {
+  children: ReactNode;
+  title: string;
+  active?: boolean;
+}
 
-function Collapsible({ children, title, active }: any) {
+const Collapsible: React.FC<ICollapsible> = ({ children, title, active = false }) => {
   const [open, setOpen] = useState<Boolean>(active);
 
   return (
     <CollapsibleWrapper>
-      <CollapsibleHeader onClick={()=>{
+      <CollapsibleHeader onClick={() => {
         setOpen(!open)
       }}>
         {title}

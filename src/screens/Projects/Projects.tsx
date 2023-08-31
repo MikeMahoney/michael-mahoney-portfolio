@@ -1,31 +1,58 @@
-import React from 'react';
-import styled from 'styled-components';
-import TownshipProject from './components/TownshipProject/TownshipProject';
+import React, { Fragment } from 'react';
+import Project from './components/Project/Project';
+import { ProjectsContent, ProjectsHeader, ProjectsWrapper } from './ProjectsStyles';
+import Thumbnail from '../../components/Thumbnail/Thumbnail';
+import TownshipWidget from './components/TownshipWidget/TownshipWidget';
 
-const ProjectsWrapper = styled.div`
-  background-color: ${props => props.theme.colors.primary};
-  padding: 10px 20px;
-  border-radius: 3px;
-`;
-const ProjectsHeader = styled.div`
-  color: ${props => props.theme.colors.header};
-  font-family: ${props => props.theme.fontFamily};
-  font-size: 24px;
-  font-weight: 600;
-`;
-const ProjectsContent = styled.div`
-  color: ${props => props.theme.colors.header};
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 10px;
-`;
+import ScreenshotCell from '../../images/townshipScreenshots/tsScreenshot1.png';
+import ScreenshotTown from '../../images/townshipScreenshots/tsScreenshot2.png';
+import ScreenshotClub from '../../images/townshipScreenshots/tsScreenshot3.png';
+import ScreenshotGun from '../../images/townshipScreenshots/tsScreenshot4.png';
+import ScreenshotHall from '../../images/townshipScreenshots/tsScreenshot5.png';
+import ScreenshotNPC from '../../images/townshipScreenshots/tsScreenshot6.png';
 
-function Projects () {
+interface IProjects { }
+
+const Projects: React.FC<IProjects> = () => {
   return (
     <ProjectsWrapper>
       <ProjectsHeader>PROJECTS</ProjectsHeader>
       <ProjectsContent>
-        <TownshipProject />
+        <Project
+          title="TOWN-SHIP DREAM ESCAPE"
+          description="A first-person puzzle/side-scrolling shooter made in Unity.
+          Available to download for free from Itch.io."
+          links={<TownshipWidget />}
+          screenshots={
+            <Fragment>
+              <Thumbnail image={ScreenshotCell} />
+              <Thumbnail image={ScreenshotTown} />
+              <Thumbnail image={ScreenshotClub} />
+              <Thumbnail image={ScreenshotGun} />
+              <Thumbnail image={ScreenshotHall} />
+              <Thumbnail image={ScreenshotNPC} />
+            </Fragment>
+          }
+        />
+        <Project
+          title="HOLLY WALSH ARTIST WEBSITE"
+          description="A portfolio website I created to showcase the works of the artist Holly Walsh."
+          links={"Website is currently down."}
+          screenshots={
+            <Fragment>
+            </Fragment>
+          }
+        />
+        <Project
+          title="TownSimple"
+          description="A straightforward WebGL town building simulator I created for my final year project at MTU.
+          Built using BabylonJS."
+          links={<a href="https://github.com/MikeMahoney/TownSimple">https://github.com/MikeMahoney/TownSimple</a>}
+          screenshots={
+            <Fragment>
+            </Fragment>
+          }
+        />
       </ProjectsContent>
     </ProjectsWrapper>
   );
