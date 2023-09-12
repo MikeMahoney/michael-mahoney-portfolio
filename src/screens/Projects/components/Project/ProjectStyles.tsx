@@ -7,8 +7,9 @@ export const ProjectWrapper = styled.div`
   border: 1px solid;
   border-color: ${props => props.theme.colors.secondary};
   border-radius: 3px;
-  padding: 5px 10px;
+  padding: 5px 10px 20px 10px;
   width: 80%;
+  min-width: 580px;
 `;
 
 export const ProjectHeader = styled.div`

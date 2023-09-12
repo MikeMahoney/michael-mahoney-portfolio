@@ -11,7 +11,7 @@ export const BlogItemYear = styled.div`
   font-size: 32px;
   font-weight: 500;
   text-align: right;
-  color: ${props => props.theme.colors.primary};
+  color:${props => props.theme.colors.header};
 `;
 
 export const BlogItemTitle = styled.div`

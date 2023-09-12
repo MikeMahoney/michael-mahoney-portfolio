@@ -11,6 +11,7 @@ import {
   ThemeSwitcher,
   ThemeSwitcherOption
 } from './MainStyles';
+import RetroLogo from './components/RetroLogo';
 
 interface IMain {
   setThemeType: Function;
@@ -21,6 +22,7 @@ const Main: React.FC<IMain> = ({ setThemeType }) => {
     <MainWrapper>
       <MainSideBar>
         <MainSideBarTitle>
+          {/* <RetroLogo /> */}
           <div>MICHAEL MAHONEY</div>
         </MainSideBarTitle>
         <MainSideBarNav>

@@ -1,7 +1,7 @@
-import HollyArtMain from '../images/HollyArtMain.PNG'
-import HollyArtMainDetail from '../images/HollyArtMainDetail.PNG'
-import HollyArtMobile from '../images/HollyArtMobile.PNG'
-import TownshipStreet from '../images/TownshipStreet.PNG'
+import HollyArtMain from '../images/HollyArtMain.png'
+import HollyArtMainDetail from '../images/HollyArtMainDetail.png'
+import HollyArtMobile from '../images/HollyArtMobile.png'
+import TownshipStreet from '../images/TownshipStreet.png'
 import TownshipGarden from '../images/TownshipGarden.png'
 import TownshipClock from '../images/TownshipClock.png'
 

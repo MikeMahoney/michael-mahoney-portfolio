@@ -9,7 +9,7 @@ const defaultTheme = {
         text: 'black',
         hover: 'black'
     },
-    fontFamily: `Garamond, Tahoma, Geneva, Verdana, sans-serif`,
+    fontFamily: `Geneva, Verdana, sans- serif`,
     fontSizes: {
         header: '20px',
         title: '22px',
@@ -25,7 +25,7 @@ const darkTheme = {
         text: '#7FFF00',
         hover: '#258073'
     },
-    fontFamily: `'Courier New', Tahoma, Geneva, Verdana, sans-serif`,
+    fontFamily: `'Courier New', Tahoma, Geneva, Verdana, sans - serif`,
     fontSizes: {
         header: '20px',
         title: '24px',
@@ -35,14 +35,14 @@ const darkTheme = {
 
 function Theme({ children, themeType }: any) {
     const getTheme = () => {
-        switch(themeType) {
+        switch (themeType) {
             case 'DEFAULT':
                 return defaultTheme;
             case 'DARK':
                 return darkTheme;
             default:
                 return defaultTheme;
-        } 
+        }
     }
 
     return <ThemeProvider theme={getTheme()} >{children}</ThemeProvider>

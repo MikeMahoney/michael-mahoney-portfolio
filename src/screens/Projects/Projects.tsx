@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Project from './components/Project/Project';
 import { ProjectsContent, ProjectsHeader, ProjectsWrapper } from './ProjectsStyles';
-import Thumbnail from '../../components/Thumbnail/Thumbnail';
+import Thumbnail from '../../sharedComponents/Thumbnail/Thumbnail';
 import TownshipWidget from './components/TownshipWidget/TownshipWidget';
 
 import ScreenshotCell from '../../images/townshipScreenshots/tsScreenshot1.png';
@@ -10,6 +10,10 @@ import ScreenshotClub from '../../images/townshipScreenshots/tsScreenshot3.png';
 import ScreenshotGun from '../../images/townshipScreenshots/tsScreenshot4.png';
 import ScreenshotHall from '../../images/townshipScreenshots/tsScreenshot5.png';
 import ScreenshotNPC from '../../images/townshipScreenshots/tsScreenshot6.png';
+
+import HollyArtMain from '../../images/HollyArtMain.png';
+import HollyArtMainDetail from '../../images/HollyArtMainDetail.png';
+import HollyArtMobile from '../../images/HollyArtMobile.png';
 
 interface IProjects { }
 
@@ -40,6 +44,9 @@ const Projects: React.FC<IProjects> = () => {
           links={"Website is currently down."}
           screenshots={
             <Fragment>
+              <Thumbnail image={HollyArtMain} />
+              <Thumbnail image={HollyArtMainDetail} />
+              <Thumbnail image={HollyArtMobile} />
             </Fragment>
           }
         />

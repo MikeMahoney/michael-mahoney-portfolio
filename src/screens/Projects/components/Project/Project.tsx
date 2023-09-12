@@ -1,4 +1,4 @@
-import Collapsible from '../../../../components/Collapsible/Collapsible';
+import Collapsible from '../../../../sharedComponents/Collapsible/Collapsible';
 import {
   ProjectDescription,
   ProjectHeader,

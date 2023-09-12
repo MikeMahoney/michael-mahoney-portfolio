@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Blogs } from '../../helpers/blogHelper';
-import Thumbnail from '../../components/Thumbnail/Thumbnail';
+import Thumbnail from '../../sharedComponents/Thumbnail/Thumbnail';
 import { BlogItem, BlogItemContent, BlogItemDescription, BlogItemTitle, BlogItemYear } from './BlogStyles';
 
 interface IBlog { }
