@@ -1,7 +1,6 @@
 import React from 'react';
 import Theme from './Theme';
 import { useState } from "react";
-import './App.css';
 
 //Components
 import Main from './screens/Main/Main';

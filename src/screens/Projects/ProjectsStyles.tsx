@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const ProjectsWrapper = styled.div`
-  background-color: ${props => props.theme.colors.primary};
   padding: 10px 20px;
   border-radius: 3px;
 `;
 
 export const ProjectsHeader = styled.div`
   color: ${props => props.theme.colors.header};
-  font-family: ${props => props.theme.fontFamily};
+  font-family: ${props => props.theme.headerFont};
   font-size: 24px;
   font-weight: 600;
 `;

@@ -4,9 +4,10 @@ import Blog from '../Blog/Blog';
 import Projects from '../Projects/Projects';
 import {
   MainContent,
-  MainSideBar,
-  MainSideBarNav,
-  MainSideBarTitle,
+  MainHeader,
+  MainHeaderNav,
+  MainHeaderNavLinks,
+  MainHeaderTitle,
   MainWrapper,
   ThemeSwitcher,
   ThemeSwitcherOption
@@ -20,30 +21,32 @@ interface IMain {
 const Main: React.FC<IMain> = ({ setThemeType }) => {
   return (
     <MainWrapper>
-      <MainSideBar>
-        <MainSideBarTitle>
+      <MainHeader>
+        <MainHeaderTitle>
           {/* <RetroLogo /> */}
           <div>MICHAEL MAHONEY</div>
-        </MainSideBarTitle>
-        <MainSideBarNav>
-          <Link to={"/"}>PROJECTS</Link>
-          <Link to={"/blog"}>BLOG</Link>
-          <Link to={"/about"}>ABOUT</Link>
-        </MainSideBarNav>
-        <ThemeSwitcher>
-          <ThemeSwitcherOption onClick={() => {
-            setThemeType('DEFAULT')
-          }}>
-            DEFAULT
-          </ThemeSwitcherOption>
-          {' / '}
-          <ThemeSwitcherOption onClick={() => {
-            setThemeType('DARK')
-          }}>
-            RETRO
-          </ThemeSwitcherOption>
-        </ThemeSwitcher>
-      </MainSideBar>
+        </MainHeaderTitle>
+        <MainHeaderNav>
+          <MainHeaderNavLinks>
+            <Link to={"/"}>PROJECTS</Link>
+            <Link to={"/blog"}>BLOG</Link>
+            <Link to={"/about"}>ABOUT</Link>
+          </MainHeaderNavLinks>
+          <ThemeSwitcher>
+            <ThemeSwitcherOption onClick={() => {
+              setThemeType('DEFAULT')
+            }}>
+              DEFAULT
+            </ThemeSwitcherOption>
+            {' / '}
+            <ThemeSwitcherOption onClick={() => {
+              setThemeType('DARK')
+            }}>
+              RETRO
+            </ThemeSwitcherOption>
+          </ThemeSwitcher>
+        </MainHeaderNav>
+      </MainHeader>
       <MainContent>
         <Routes>
           <Route path="/blog" element={<Blog />} />

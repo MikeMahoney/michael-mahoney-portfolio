@@ -1,9 +1,15 @@
-import React, { Fragment } from 'react';
-import { Blogs } from '../../helpers/blogHelper';
-import Thumbnail from '../../sharedComponents/Thumbnail/Thumbnail';
-import { BlogItem, BlogItemContent, BlogItemDescription, BlogItemTitle, BlogItemYear } from './BlogStyles';
+import React, { Fragment } from 'react'
+import { Blogs } from '../../helpers/blogHelper'
+import Thumbnail from '../../sharedComponents/Thumbnail/Thumbnail'
+import {
+  BlogItem,
+  BlogItemContent,
+  BlogItemDescription,
+  BlogItemTitle,
+  BlogItemYear
+} from './BlogStyles'
 
-interface IBlog { }
+interface IBlog {}
 
 const Blog: React.FC<IBlog> = () => {
   return (
@@ -15,16 +21,11 @@ const Blog: React.FC<IBlog> = () => {
             <BlogItem key={index}>
               <BlogItemTitle>{blog.title}</BlogItemTitle>
               {blog.description.map((item, index) => (
-                <BlogItemDescription key={index}>
-                  {item}
-                </BlogItemDescription>
+                <BlogItemDescription key={index}>{item}</BlogItemDescription>
               ))}
               <BlogItemContent>
                 {blog.images.map((image, index) => (
-                  <Thumbnail
-                    image={image}
-                    key={index}
-                  />
+                  <Thumbnail image={image} key={index} />
                 ))}
               </BlogItemContent>
             </BlogItem>
@@ -32,7 +33,7 @@ const Blog: React.FC<IBlog> = () => {
         </Fragment>
       ))}
     </Fragment>
-  );
+  )
 }
 
-export default Blog;
+export default Blog
